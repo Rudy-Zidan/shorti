@@ -45,7 +45,7 @@ Shorti.setup do |config|
   # if you are in production then it will be your own domain.
   config.domain = ENV['SHORTI_DOMAIN']
 end
-``
+```
 
 You can set the Shorti routes in your routes.rb as the following:
 ```ruby
