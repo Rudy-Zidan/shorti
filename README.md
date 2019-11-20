@@ -29,7 +29,7 @@ $ rails db:migrate
 ```
 
 ## Configuration
-You will need to install [Ngrok](https://ngrok.com/) to test the app probably.
+You will need to install [Ngrok](https://ngrok.com/) to test the app properly.
 You can set the main domain for shorti by setting up an initializer "shorti.rb" in your app as the following:
 /config/initializers/shorti.rb
 ```ruby
