@@ -1,9 +1,6 @@
 # Shorti
 A Shortener url gem for rails
 
-## Usage
-How to use my plugin.
-
 ## Installation
 Add this line to your application's Gemfile:
 
@@ -24,6 +21,15 @@ $ gem install shorti
 Then install shorti:
 ```bash
 $ rails g shorti:install
+```
+
+## Configuration
+You can set the main domain for shorti by setting up an initializer "shorti.rb" in your app as the following:
+/config/initializers/shorti.rb
+```ruby
+Shorti.setup do |config|
+  config.domain = ENV['SHORTI_DOMAIN']
+end
 ```
 
 ## Contributing
