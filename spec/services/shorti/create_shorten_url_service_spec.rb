@@ -37,13 +37,7 @@ module Shorti
       end
 
       describe 'already exist url' do
-        let!(:stored_shorten_url) do
-          FactoryBot.create(
-            :shorten_url,
-            url: Faker::Internet.url,
-            original_url: Faker::Internet.url
-          )
-        end
+        let!(:stored_shorten_url) { FactoryBot.create(:shorten_url) }
 
         before do
           allow_any_instance_of(described_class).to receive(:generate_shorten_url).and_return(stored_shorten_url.url)
