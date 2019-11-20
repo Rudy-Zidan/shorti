@@ -21,6 +21,11 @@ Or install it yourself as:
 $ gem install shorti
 ```
 
+Then install shorti:
+```bash
+$ rails g shorti:install
+```
+
 ## Contributing
 Contribution directions go here.
 
