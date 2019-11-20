@@ -5,7 +5,7 @@ A Shortener url gem for rails
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'shorti'
+gem 'shorti', git: 'https://github.com/Rudy-Zidan/shorti.git'
 ```
 
 And then execute:
@@ -83,6 +83,9 @@ mount Shorti::Engine => "/"
 - Models
   - ShortenUrl:
       Represent a shortened full url. Contains the following attributes("id", "original_url", "url", "created_at", "updated_at").
+
+## Api collection
+Download the following [Postman collection](https://github.com/Rudy-Zidan/shorti/blob/master/Shorti.postman_collection.json)
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
