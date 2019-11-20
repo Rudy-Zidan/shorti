@@ -1,8 +1,9 @@
 module Shorti
   class ShortenUrlsController < ApplicationController
+    before_action :set_shorten_url, only: [:show, :destroy]
+
     def show
-      shorten_url = FindShortenUrlByIdService.run(id: params[:id])
-      render json: present_shorten_url(shorten_url), status: :ok
+      render json: present_shorten_url(@shorten_url), status: :ok
     end
 
     def create
@@ -15,6 +16,11 @@ module Shorti
       end
     end
 
+    def destroy
+      DestroyShortenUrlService.run(shorten_url: @shorten_url)
+      head :no_content
+    end
+
     private
 
     def create_params
@@ -23,6 +29,10 @@ module Shorti
 
     def present_shorten_url(shorten_url)
       ShortenUrlPresenter.present(shorten_url: shorten_url)
+    end
+
+    def set_shorten_url
+      @shorten_url = FindShortenUrlByIdService.run(id: params[:id])
     end
   end
 end
