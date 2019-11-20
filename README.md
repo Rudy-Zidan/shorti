@@ -45,7 +45,7 @@ In development and test mode please set the following environment variables from
 ENV['HOST']
 ```
 
-You can set the Shorti routes in your route.rb as the following:
+You can set the Shorti routes in your routes.rb as the following:
 ```ruby
 mount Shorti::Engine => "/"
 ```
@@ -80,7 +80,7 @@ mount Shorti::Engine => "/"
       Delete shorten_url from DB.
 - Models
   - ShortenUrl:
-      Represent a shortened full url. Contain the following attributes("id", "original_url", "url", "created_at", "updated_at")
+      Represent a shortened full url. Contains the following attributes("id", "original_url", "url", "created_at", "updated_at").
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
