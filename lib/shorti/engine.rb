@@ -9,4 +9,15 @@ module Shorti
       g.factory_bot dir: 'spec/factories'
     end
   end
+
+  # allow to override engine configurations using initializers
+  def self.setup(&block)
+    @config ||= Shorti::Engine::Configuration.new
+    yield @config if block
+    @config
+  end
+
+  def self.config
+    Rails.application.config
+  end
 end

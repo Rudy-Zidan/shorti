@@ -1,6 +1,6 @@
 module Shorti
   class CreateShortenUrlService < BaseService
-    def initialize(url:, domain:)
+    def initialize(url: nil, domain: Shorti.config.domain)
       @url = url
       @domain = domain
     end

@@ -17,6 +17,14 @@ module Shorti
           expect(shorten_url.persisted?).to be_truthy
         end
       end
+
+      describe 'create without domain' do
+        it 'should return a valid shorten_url object' do
+          shorten_url = described_class.run(url: params[:url])
+
+          expect(shorten_url.persisted?).to be_truthy
+        end
+      end
     end
 
     context 'Validation Errors' do
