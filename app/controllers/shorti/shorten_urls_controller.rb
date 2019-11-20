@@ -2,6 +2,11 @@ module Shorti
   class ShortenUrlsController < ApplicationController
     before_action :set_shorten_url, only: [:show, :destroy]
 
+    def index
+      pagy, shorten_urls = GetAllShortenUrlService.run(index_params.to_h.symbolize_keys)
+      render json: ShortenUrlCollectionPresenter.present(shorten_urls: shorten_urls, pagy: pagy), status: :ok
+    end
+
     def show
       render json: present_shorten_url(@shorten_url), status: :ok
     end
@@ -21,7 +26,16 @@ module Shorti
       head :no_content
     end
 
+    def redirect
+      shorten_url = FindShortenUrlByUrlService.run(url: request.original_url)
+      redirect_to shorten_url.original_url
+    end
+
     private
+
+    def index_params
+      params.permit [:page, :per_page]
+    end
 
     def create_params
       params.permit [:url, :domain]

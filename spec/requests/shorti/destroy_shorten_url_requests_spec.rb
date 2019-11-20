@@ -5,7 +5,7 @@ module Shorti
 
       describe 'shorten url exist' do
         it 'should return 200' do
-          delete "/shorti/shorten_urls/#{shorten_url.id}"
+          delete "/shorten_urls/#{shorten_url.id}"
 
           expect(response).to have_http_status(:success)
         end
@@ -15,7 +15,7 @@ module Shorti
     context 'Not found' do
       describe 'shorten url not exist' do
         it 'should return 400' do
-          delete "/shorti/shorten_urls/not-found"
+          delete "/shorten_urls/not-found"
 
           expect(response).to have_http_status(:not_found)
           data = JSON.parse(response.body)

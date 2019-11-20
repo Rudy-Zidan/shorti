@@ -10,7 +10,7 @@ module Shorti
 
       describe 'create a shorten request' do
         it 'should return 201' do
-          post '/shorti/shorten_urls', params: params
+          post '/shorten_urls', params: params
 
           expect(response).to have_http_status(:created)
           data = JSON.parse(response.body)
@@ -23,7 +23,7 @@ module Shorti
     context 'Validations' do
       describe 'presence' do
         it 'should return 422' do
-          post '/shorti/shorten_urls', params: { url: nil, domain: nil }
+          post '/shorten_urls', params: { url: nil, domain: nil }
 
           expect(response).to have_http_status(:unprocessable_entity)
           data = JSON.parse(response.body)
@@ -55,7 +55,7 @@ module Shorti
         end
 
         it 'should return 422' do
-          post '/shorti/shorten_urls', params: params
+          post '/shorten_urls', params: params
 
           expect(response).to have_http_status(:unprocessable_entity)
           data = JSON.parse(response.body)

@@ -35,4 +35,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'faker'
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'dotenv-rails'
+  spec.add_development_dependency 'pagy'
+  spec.add_development_dependency 'database_cleaner'
 end

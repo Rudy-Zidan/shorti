@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  mount Shorti::Engine => "/shorti"
+  # Set shorti routes on app level
+  mount Shorti::Engine => "/"
 end
