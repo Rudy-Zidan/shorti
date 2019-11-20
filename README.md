@@ -1,5 +1,5 @@
 # Shorti
-Short description and motivation.
+A Shortener url gem for rails
 
 ## Usage
 How to use my plugin.
