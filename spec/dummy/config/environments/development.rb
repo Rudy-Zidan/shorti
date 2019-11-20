@@ -61,5 +61,5 @@ Rails.application.configure do
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # set this for using ngrok and test redirection correctly
-  config.hosts << ENV['HOST']
+  config.hosts << ENV['SHORTI_DOMAIN']
 end

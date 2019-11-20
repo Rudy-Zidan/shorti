@@ -30,6 +30,13 @@ $ rails db:migrate
 
 ## Configuration
 You will need to install [Ngrok](https://ngrok.com/) to test the app properly.
+
+In development and test mode please set the following environment variables from "Ngrok" so you can work with url redirection fine:
+```txt
+# ngrok domain or your real domain on production.
+SHORTI_DOMAIN=domain_goes_here
+```
+
 You can set the main domain for shorti by setting up an initializer "shorti.rb" in your app as the following:
 /config/initializers/shorti.rb
 ```ruby
@@ -38,12 +45,7 @@ Shorti.setup do |config|
   # if you are in production then it will be your own domain.
   config.domain = ENV['SHORTI_DOMAIN']
 end
-```
-In development and test mode please set the following environment variables from "Ngrok" so you can work with url redirection fine:
-```ruby
-# ngrok domain or your real domain on production.
-ENV['HOST']
-```
+``
 
 You can set the Shorti routes in your routes.rb as the following:
 ```ruby

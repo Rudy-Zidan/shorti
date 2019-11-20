@@ -1,10 +1,11 @@
 module Shorti
   RSpec.describe 'Redirect Shorten Url by url', :request do
     context 'Normal Case' do
-      let(:shorten_url) { FactoryBot.create(:shorten_url, url: "http://#{ENV['HOST']}/rtSxc2") }
+      let(:domain) { ENV['SHORTI_DOMAIN'] }
+      let(:shorten_url) { FactoryBot.create(:shorten_url, url: "http://#{domain}/rtSxc2") }
 
       before do
-        host! ENV['HOST']
+        host! domain
       end
 
       describe 'shorten url exist' do
