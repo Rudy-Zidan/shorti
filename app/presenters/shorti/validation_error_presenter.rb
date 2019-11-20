@@ -5,12 +5,14 @@ module Shorti
     end
 
     def present
-      @errors.each_with_object([]) do |(field, message), collection|
-        collection << {
-          field: field,
-          message: message
-        }
-      end
+      {
+        errors: @errors.each_with_object([]) do |(field, message), collection|
+          collection << {
+            field: field,
+            message: message
+          }
+        end
+      }
     end
   end
 end

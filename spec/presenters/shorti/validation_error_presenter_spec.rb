@@ -5,12 +5,14 @@ module Shorti
       presented = described_class.present(errors: shorten_url.errors)
 
       expect(presented).to eq(
-        [
-          {field: :url, message: "can't be blank"},
-          {field: :url, message: "is invalid"},
-          {field: :original_url, message: "can't be blank"},
-          {field: :original_url, message: "is invalid"}
-        ]
+        {
+          errors: [
+            {field: :url, message: "can't be blank"},
+            {field: :url, message: "is invalid"},
+            {field: :original_url, message: "can't be blank"},
+            {field: :original_url, message: "is invalid"}
+          ]
+        }
       )
     end
   end

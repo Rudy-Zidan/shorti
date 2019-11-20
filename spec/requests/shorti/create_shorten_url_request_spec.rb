@@ -28,12 +28,16 @@ module Shorti
           expect(response).to have_http_status(:unprocessable_entity)
           data = JSON.parse(response.body)
 
-          expect(data).to eq([
-            {"field"=>"url", "message"=>"can't be blank"},
-            {"field"=>"url", "message"=>"is invalid"},
-            {"field"=>"original_url", "message"=>"can't be blank"},
-            {"field"=>"original_url", "message"=>"is invalid"}
-          ])
+          expect(data).to eq(
+            {
+              "errors"=>[
+                {"field"=>"url", "message"=>"can't be blank"},
+                {"field"=>"url", "message"=>"is invalid"},
+                {"field"=>"original_url", "message"=>"can't be blank"},
+                {"field"=>"original_url", "message"=>"is invalid"}
+              ]
+            }
+          )
         end
       end
 
@@ -56,7 +60,7 @@ module Shorti
           expect(response).to have_http_status(:unprocessable_entity)
           data = JSON.parse(response.body)
 
-          expect(data).to eq([{"field"=>"url", "message"=>"has already been taken"}])
+          expect(data).to eq({"errors"=>[{"field"=>"url", "message"=>"has already been taken"}]})
         end
       end
     end
