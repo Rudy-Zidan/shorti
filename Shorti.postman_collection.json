@@ -1,0 +1,820 @@
+{
+	"info": {
+		"_postman_id": "fd77444e-b13b-4fc9-a5f9-c3d20b556635",
+		"name": "Shorti",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a shorten url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\": \"https://www.facebook.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/shorten_urls",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shorten_urls"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"url\": \"https://www.facebook.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/shorten_urls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shorten_urls"
+							]
+						}
+					},
+					"status": "Created ",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"85b15da511bf2a91b232fa3d68a5739a\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "03aa5a1d-2a7b-48e5-96ce-959d31c66a2c"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.066476"
+						},
+						{
+							"key": "Server",
+							"value": "WEBrick/1.4.2 (Ruby/2.6.3/2019-04-16)"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2019 23:02:16 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 10,\n    \"original_url\": \"https://www.facebook.com\",\n    \"url\": \"https://a9188dd9.ngrok.io/lu7Zk6C0\",\n    \"created_at\": 1574290936,\n    \"updated_at\": 1574290936\n}"
+				},
+				{
+					"name": "Validations",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"url\": \"https://facebook\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/shorten_urls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shorten_urls"
+							]
+						}
+					},
+					"status": "Unprocessable Entity ",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "8b1c64df-d7f7-48b8-b3a2-d23a8b1c3bf8"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.728275"
+						},
+						{
+							"key": "Server",
+							"value": "WEBrick/1.4.2 (Ruby/2.6.3/2019-04-16)"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2019 23:02:33 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": [\n        {\n            \"field\": \"original_url\",\n            \"message\": \"is invalid\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "List all shorten urls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/shorten_urls?page=1&per_page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shorten_urls"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/shorten_urls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shorten_urls"
+							]
+						}
+					},
+					"status": "OK ",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"c76b618f20018fee4d50d85421be34fb\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "eaafb206-5ba3-4714-b222-3981ad438d03"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.028718"
+						},
+						{
+							"key": "Server",
+							"value": "WEBrick/1.4.2 (Ruby/2.6.3/2019-04-16)"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2019 23:03:16 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1575"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"current_page\": 1,\n        \"total_pages\": 2\n    },\n    \"data\": [\n        {\n            \"id\": 11,\n            \"original_url\": \"https://facebook.com\",\n            \"url\": \"https://a9188dd9.ngrok.io/QMK1vDjF\",\n            \"created_at\": 1574290946,\n            \"updated_at\": 1574290946\n        },\n        {\n            \"id\": 10,\n            \"original_url\": \"https://www.facebook.com\",\n            \"url\": \"https://a9188dd9.ngrok.io/lu7Zk6C0\",\n            \"created_at\": 1574290936,\n            \"updated_at\": 1574290936\n        },\n        {\n            \"id\": 9,\n            \"original_url\": \"https://www.facebook.com/\",\n            \"url\": \"https://a9188dd9.ngrok.io/iwU0WyWm\",\n            \"created_at\": 1574284261,\n            \"updated_at\": 1574284261\n        },\n        {\n            \"id\": 8,\n            \"original_url\": \"https://www.google.com/test/path/to/resource\",\n            \"url\": \"https://a9188dd9.ngrok.io/EZxOdb2q\",\n            \"created_at\": 1574283837,\n            \"updated_at\": 1574283837\n        },\n        {\n            \"id\": 7,\n            \"original_url\": \"https://www.google.com/test/path/to/resource\",\n            \"url\": \"https://a9188dd9.ngrok.io/Vt3ocaJg\",\n            \"created_at\": 1574281276,\n            \"updated_at\": 1574281276\n        },\n        {\n            \"id\": 6,\n            \"original_url\": \"https://www.google.com/test/path/to/resource\",\n            \"url\": \"https://a9188dd9.ngrok.io/ZTXQP0uY\",\n            \"created_at\": 1574268406,\n            \"updated_at\": 1574268406\n        },\n        {\n            \"id\": 5,\n            \"original_url\": \"https://www.google.com/test/path/to/resource\",\n            \"url\": \"https://www.fb.com/gn3YORvQ\",\n            \"created_at\": 1574266333,\n            \"updated_at\": 1574266333\n        },\n        {\n            \"id\": 4,\n            \"original_url\": \"https://www.google.com/test/path/to/resource\",\n            \"url\": \"https://a9188dd9.ngrok.io/Ky_DfJ33\",\n            \"created_at\": 1574266020,\n            \"updated_at\": 1574266020\n        },\n        {\n            \"id\": 3,\n            \"original_url\": \"https://www.google.com/test/path/to/resource\",\n            \"url\": \"https://www.glg.com/DoJkTFao\",\n            \"created_at\": 1574264875,\n            \"updated_at\": 1574264875\n        },\n        {\n            \"id\": 2,\n            \"original_url\": \"https://www.google.com/test\",\n            \"url\": \"https://www.glg.com/T3wSZSRw\",\n            \"created_at\": 1574264864,\n            \"updated_at\": 1574264864\n        }\n    ]\n}"
+				},
+				{
+					"name": "Success with pagination",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/shorten_urls?page=1&per_page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shorten_urls"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK ",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"29c63388909f612debe77999b9345a3f\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "3df3d118-c660-47a4-8693-4bcc0c6de6a2"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.011608"
+						},
+						{
+							"key": "Server",
+							"value": "WEBrick/1.4.2 (Ruby/2.6.3/2019-04-16)"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2019 23:03:44 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "192"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"current_page\": 1,\n        \"total_pages\": 11\n    },\n    \"data\": [\n        {\n            \"id\": 11,\n            \"original_url\": \"https://facebook.com\",\n            \"url\": \"https://a9188dd9.ngrok.io/QMK1vDjF\",\n            \"created_at\": 1574290946,\n            \"updated_at\": 1574290946\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Show shorten url by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/shorten_urls/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shorten_urls",
+						"9"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/shorten_urls/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shorten_urls",
+								"9"
+							]
+						}
+					},
+					"status": "OK ",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"4dab0ed3d73241e9b26c722ed12f7f8e\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "a3352007-bd52-4b7d-b1cf-7bb6003a8885"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.014879"
+						},
+						{
+							"key": "Server",
+							"value": "WEBrick/1.4.2 (Ruby/2.6.3/2019-04-16)"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2019 23:04:34 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 9,\n    \"original_url\": \"https://www.facebook.com/\",\n    \"url\": \"https://a9188dd9.ngrok.io/iwU0WyWm\",\n    \"created_at\": 1574284261,\n    \"updated_at\": 1574284261\n}"
+				},
+				{
+					"name": "Not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/shorten_urls/not-found",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shorten_urls",
+								"not-found"
+							]
+						}
+					},
+					"status": "Not Found ",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "5c110638-c097-4807-977b-a42891fa0332"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.012431"
+						},
+						{
+							"key": "Server",
+							"value": "WEBrick/1.4.2 (Ruby/2.6.3/2019-04-16)"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2019 23:04:46 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Couldn't find Shorti::ShortenUrl with 'id'=not-found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Destroy shorten url",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/shorten_urls/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shorten_urls",
+						"9"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Not found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/shorten_urls/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shorten_urls",
+								"9"
+							]
+						}
+					},
+					"status": "Not Found ",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "ef3533e9-7ec0-4b70-8849-ff6a549fcccf"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.012162"
+						},
+						{
+							"key": "Server",
+							"value": "WEBrick/1.4.2 (Ruby/2.6.3/2019-04-16)"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2019 23:05:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Couldn't find Shorti::ShortenUrl with 'id'=9\"\n}"
+				},
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/shorten_urls/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shorten_urls",
+								"9"
+							]
+						}
+					},
+					"status": "No Content ",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "7d4b70a2-35f3-4c42-b216-8e6732a65520"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.014113"
+						},
+						{
+							"key": "Server",
+							"value": "WEBrick/1.4.2 (Ruby/2.6.3/2019-04-16)"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2019 23:05:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
